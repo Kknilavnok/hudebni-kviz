@@ -1,0 +1,50 @@
+ml>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Score</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Streak</div>
+                <div class="stat-value" id="streak">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Time</div>
+                <div class="stat-value" id="timer">0:00</div>
+            </div>
+        </div>
+        
+        <div class="difficulty-selector">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" onchange="changeDifficulty()">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <h2>Seřaď slova do správného pořadí</h2>
+        <div class="drop-zone" id="dropZone"></div>
+        <div class="word-container" id="wordContainer"></div>
+        
+        <div class="button-container">
+            <button class="game-button check-button" onclick="checkOrder()">Check Order</button>
+            <button class="game-button reset-button" onclick="resetCurrentSentence()">Reset</button>
+            <button class="game-button next-button" onclick="nextSentence()">Next Sentence</button>
+            <button class="game-button hint-button" onclick="showHint()">Hint</button>
+        </div>
+        
+        <div id="result" class="result"></div>
+    </div>
+
+
+</body>
+</html>
